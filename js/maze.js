@@ -26,8 +26,6 @@ function generateMaze(rows, cols) {
       for (let j = 0; j < cols; j++) {
         const cell = maze[i][j];
 
-
-
         const cellDiv = document.createElement('div');
         cellDiv.className = 'cell';
 
