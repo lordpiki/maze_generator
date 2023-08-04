@@ -15,6 +15,10 @@ function generateMaze(rows, cols) {
     }
   }
 
+
+
+
+
   // Function to render the maze on the webpage
   function renderMaze() {
     const mazeContainer = document.getElementById('maze-container');
@@ -90,5 +94,21 @@ function generateMaze(rows, cols) {
 
 }
 
-// Example usage:
+function updateMazeSize() {
+  const slider = document.getElementById('maze-size-slider');
+  const mazeSizeValue = document.getElementById('maze-size-value');
+  const newSize = parseInt(slider.value);
 
+  mazeSizeValue.textContent = newSize;
+
+  // Regenerate and render the maze with the new size
+  const maze = generateMaze(newSize, newSize);
+}
+
+// Listen for the slider value change event
+const slider = document.getElementById('maze-size-slider');
+slider.addEventListener('input', updateMazeSize);
+
+// Example usage:
+const defaultSize = 10;
+const maze = generateMaze(defaultSize, defaultSize);

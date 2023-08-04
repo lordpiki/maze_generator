@@ -7,8 +7,14 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <input type="range" id="maze-size-slider" min="5" max="30" step="1" value="10">
+  <label for="maze-size-slider">Maze Size: <span id="maze-size-value">10</span></label>
+
+  <button onclick="updateMazeSize()">Randomize</button>
+
   <div id="maze-container"></div>
-  <button onclick="generateMaze(15, 15)">generate</button>
+
   <script src="js/maze.js"></script>
 </body>
 </html>
