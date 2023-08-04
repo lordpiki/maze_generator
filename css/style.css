@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box; /* Apply border-box box-sizing to all elements */
+}
+
+:root {
+  --rows: 10; /* Default number of rows */
+  --cols: 10; /* Default number of columns */
+}
+
+#maze-container {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 30px); /* Adjust the number of columns using CSS variable */
+  grid-template-rows: repeat(var(--rows), 30px); /* Adjust the number of rows as needed */
+  gap: 0; /* Set the gap between cells to 0 */
+  background-color: #f0f0f0; /* Adjust the background color of the maze */
+  margin: 20px auto;
+  width: fit-content;
+  border: 2px solid #333333; /* Add a border to the maze container to compensate for the gaps */
+  box-sizing: content-box; /* Set box-sizing to content-box to exclude padding and border from the element's width and height */
+}
+
+.cell {
+  color: white;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff; /* Adjust the cell color */
+  border: 0; /* Remove the border from the cells */
+}
+
+.wall-top,
+.wall-right,
+.wall-bottom,
+.wall-left {
+  background-color: white; /* Adjust the wall color */
+}
+
+/* Adjust the wall size */
+.wall-top { border-top: 1px solid #333333; }
+.wall-right { border-right: 1px solid #333333; }
+.wall-bottom { border-bottom: 1px solid #333333; }
+.wall-left { border-left: 1px solid #333333; }
+
+.start-point {
+  background-color: #00ff00; /* Customize the starting point color */
+}
+
+.end-point {
+  background-color: #ff0000; /* Customize the ending point color */
+}
