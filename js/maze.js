@@ -113,8 +113,7 @@ function solveMaze() {
 
     if (row === rows - 1 && col === cols - 1) {
       maze[row][col].solution = true;
-        renderMaze(maze);
-// Mark the cell as part of the solution
+    // Mark the cell as part of the solution
       return true; // Found the exit
     }
 
